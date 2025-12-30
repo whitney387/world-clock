@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="src/styles.css" />
     <title>world clock</title>
   </head>
@@ -16,15 +22,19 @@
         <option value="sydney">Sydney</option>
         <option value="tokyo">Tokyo</option>
       </select>
-      <div class="city">
-        <h2>Los Angeles</h2>
-        <div class="date">August 23 2025</div>
-        <div class="time">12.55 AM</div>
+      <div class="city d-flex justify-content-between">
+        <div>
+          <h2 class="h-2">London</h2>
+          <div class="date">August 23 2025</div>
+        </div>
+        <div class="time p-2">12.55 <small>AM</small></div>
       </div>
-      <div class="city">
-        <h2>London</h2>
-        <div class="date">August 23 2025</div>
-        <div class="time">12.55 AM</div>
+      <div class="city d-flex justify-content-between">
+        <div>
+          <h2 class="h-2">Paris</h2>
+          <div class="date">August 23 2025</div>
+        </div>
+        <div class="time p-2">12.55 <small>AM</small></div>
       </div>
     </div>
     <footer>
