@@ -22,14 +22,14 @@
         <option value="sydney">Sydney</option>
         <option value="tokyo">Tokyo</option>
       </select>
-      <div class="city d-flex justify-content-between">
+      <div class="city d-flex justify-content-between" id="london">
         <div>
-          <h2 class="h-2">London</h2>
+          <h2 class="h-2" id="london">London</h2>
           <div class="date">August 23 2025</div>
         </div>
         <div class="time p-2">12.55 <small>AM</small></div>
       </div>
-      <div class="city d-flex justify-content-between">
+      <div class="city d-flex justify-content-between" id="paris">
         <div>
           <h2 class="h-2">Paris</h2>
           <div class="date">August 23 2025</div>
@@ -43,6 +43,11 @@
         >open-sourced on github</a
       >
     </footer>
-    <script src="src/index.js"></script>
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.6.0/moment-timezone.min.js"></script>
+
+<script src="https://momentjs.com/downloads/moment-timezone-with-data-10-year-range.js"></script>
+
+<script src="src/index.js"></script>
 </html>
