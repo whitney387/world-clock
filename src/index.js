@@ -3,7 +3,7 @@ function updateTime() {
   let londonDate = londonElement.querySelector(".date");
   let londonTime = londonElement.querySelector(".time");
 
-  let nowInLondon = moment().tz("Europe/London");
+  let nowInLondon = moment().tz("Asia/Tokyo");
 
   londonDate.innerHTML = nowInLondon.format("MMMM Do YYYY");
 
@@ -25,3 +25,26 @@ function updateTime() {
 }
 updateTime();
 setInterval(updateTime, 1000);
+
+function updateCity(event) {
+  let cityTimeZone = event.target.value;
+  let cityName = cityTimeZone.replace("_", "").split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
+  let citiesSearch = document.getElementById("cities");
+
+  // Fix: Assign the template literal directly to innerHTML
+  citiesSearch.innerHTML = `
+    <div class="city d-flex justify-content-between">
+      <div>
+        <h2 class="h-2">${cityName}</h2>
+        <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+      </div>
+      <div class="time p-2">
+        ${cityTime.format("h:mm:ss")}<small>${cityTime.format("A")}</small>
+      </div>
+    </div>
+  `;
+}
+
+let citiesElement = document.getElementById("country");
+citiesElement.addEventListener("change", updateCity);
